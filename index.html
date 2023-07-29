@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+    <title>Converter</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="title">
+            <h1>Ciao PJ</h1>
+            <h2>Usa questo sito per rendere il tuo lavoro un po' più facile.
+            </h2>
+        </div>
+        <div class="content-container">
+            <h4>Converti</h4>
+            <div class="inputs-container">
+                <div class="const">
+                    <label for="MV">Digita qui  <var>MW (g/mole o Da o uma)</var> <input type="number" value="77.15" onmouseenter="MouseEnter(this)" onmouseout="MouseOut(this)"></label>
+                    <p>Es: Insulina = 5734 <var>g/mol</var> </p>
+                </div>
+                <div class="vars">
+                    <div class="input">
+                        <label for="misuraA">Concentrazione soluzione <var>(mg/mL o g/l)</var>: <input type="number" name="misuraA" id="A" onmouseenter="MouseEnter(this)" onmouseout="MouseOut(this)"></label>
+                        <p>corriesponde concentrazione <var>molare (M)</var><span class="result"></span></p>
+                    </div>
+                    <div class="input">
+                    <label for="molarita">Molarità soluzione <var>(M)</var> <input type="number" name="moralita" onmouseenter="MouseEnter(this)" onmouseout="MouseOut(this)"></label>
+                        <p> corrispondente concentrazione <var>(mg/mL o g/L)</var></p>
+                    </div>
+                    <div class="input">
+                        <label for="volume">Volume della soluzione che vuoi ottenere <var>(mL) </var><input type="number" name="volume" onmouseenter="MouseEnter(this)" onmouseout="MouseOut(this)"></label>
+                        <label for="volume2">Massa da pesare <var>(mg)</var> <input type="number" name="volume2" onmouseenter="MouseEnter(this)" onmouseout="MouseOut(this)"></label>
+                        <p>Corrisponde in <var>g</var></p>
+                    </div>
+                    <div class="input">
+                        <label for="volume">Volume della soluzione che vuoi ottenere <var>(uL) </var><input type="number" name="volume" onmouseenter="MouseEnter(this)" onmouseout="MouseOut(this)"></label>
+                        <label for="volume2">Massa da pesare <var>(mg)</var> <input type="number" name="volume2" onmouseenter="MouseEnter(this)" onmouseout="MouseOut(this)"></label>
+                        <p>Corrisponde in <var>g</var></p>
+                    </div>
+
+                </div>
+                              
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
