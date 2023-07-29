@@ -21,40 +21,30 @@
             <h4>Converti</h4>
             <div class="inputs-container">
                 <div class="const">
-                    <label for="MV">Digita qui  <var>MW (g/mole o Da o uma)</var> <input type="number" value="77.15" onmouseenter="MouseEnter(this)" onmouseout="MouseOut(this)"></label>
+                    <label for="MV">Digita qui  <var>MW (g/mole o Da o uma)</var> <input type="number" value="77.15" onmouseenter="MouseReaction(this)" onmouseout="MouseReaction(this)"></label>
                     <p>Es: Insulina = 5734 <var>g/mol</var> </p>
-                </div>
-                <div class="vars">
-                    <div class="input">
-                        <label for="misuraA">Concentrazione soluzione <var>(mg/mL o g/l)</var>: <input type="number" name="misuraA" id="A" onmouseenter="MouseEnter(this)" onmouseout="MouseOut(this)"></label>
-                        <p>corriesponde concentrazione <var>molare (M)</var><span class="result"></span></p>
-                    </div>
-                    <div class="input">
-                    <label for="molarita">Molarità soluzione <var>(M)</var> <input type="number" name="moralita" onmouseenter="MouseEnter(this)" onmouseout="MouseOut(this)"></label>
-                        <p> corrispondente concentrazione <var>(mg/mL o g/L)</var></p>
-                    </div>
-                    <div class="input">
-                        <label for="volume">Volume della soluzione che vuoi ottenere <var>(mL) </var><input type="number" name="volume" onmouseenter="MouseEnter(this)" onmouseout="MouseOut(this)"></label>
-                        <label for="volume2">Massa da pesare <var>(mg)</var> <input type="number" name="volume2" onmouseenter="MouseEnter(this)" onmouseout="MouseOut(this)"></label>
-                        <p>Corrisponde in <var>g</var></p>
-                    </div>
-                    <div class="input">
-                        <label for="volume">Volume della soluzione che vuoi ottenere <var>(uL) </var><input type="number" name="volume" onmouseenter="MouseEnter(this)" onmouseout="MouseOut(this)"></label>
-                        <label for="volume2">Massa da pesare <var>(mg)</var> <input type="number" name="volume2" onmouseenter="MouseEnter(this)" onmouseout="MouseOut(this)"></label>
-                        <p>Corrisponde in <var>g</var></p>
-                    </div>
-
-                </div>
-                
+                </div>                
                 <div class="selection-test">
-                    <label for="mesurements">Select a mesurement</label>
+                    <label for=""> unita a convertire
+                        <input type="number" name="" id="" onmouseenter="MouseReaction(this)" onmouseout="MouseReaction(this)">
+                    </label>
+                    <label for="Partenza">Unita di Partenza</label>
+                    <select name="Partenza" id="Partenza">
+                        <option value="M">M</option>
+                        <option value="mg/mL">mg/mL</option>
+                        <option value="g/ml">g/ml</option>
+                    </select>
+                    <label for="mesurements">Unità d'arrivo</label>
                     <select name="mesurements" id="mesurements">
-                        <option value="1">option</option>
-                        <option value="2">option</option>
-                        <option value="3">option</option>
+                        <option value="M">M</option>
+                        <option value="mg/mL">mg/mL</option>
+                        <option value="mM">mM</option>
+                        <option value="uM">uM</option>
                     </select>
                 </div>
-
+                <div class="result-container">
+                    <span class="result"></span>
+                </div>
             </div>
         </div>
     </div>

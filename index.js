@@ -1,10 +1,4 @@
-console.log($(".const"))
-
-function MouseEnter(x) {
-    $(x).toggleClass("mouse-over-input")
-}
-
-function MouseOut(x){
+function MouseReaction(x) {
     $(x).toggleClass("mouse-over-input")
 }
 
