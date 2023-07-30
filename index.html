@@ -21,25 +21,30 @@
             <h4>Converti</h4>
             <div class="inputs-container">
                 <div class="const">
-                    <label for="MV">Digita qui  <var>MW (g/mole o Da o uma)</var> <input type="number" value="77.15" onmouseenter="MouseReaction(this)" onmouseout="MouseReaction(this)"></label>
+                    <label for="MV">Digita qui  <var>MW (g/mole o Da o uma)</var>
+                        <input type="number" id="wm" value="77.15" onmouseenter="MouseReaction(this)" onmouseout="MouseReaction(this)">
+                    </label>
                     <p>Es: Insulina = 5734 <var>g/mol</var> </p>
                 </div>                
                 <div class="selection-test">
-                    <label for=""> unita a convertire
-                        <input type="number" name="" id="" onmouseenter="MouseReaction(this)" onmouseout="MouseReaction(this)">
+                    <label for="inputEntered"> unita a convertire
+                        <input type="number" name="inputEntered" id="inputEntered" onmouseenter="MouseReaction(this)" onmouseout="MouseReaction(this)">
                     </label>
                     <label for="Partenza">Unita di Partenza</label>
                     <select name="Partenza" id="Partenza">
-                        <option value="M">M</option>
                         <option value="mg/mL">mg/mL</option>
                         <option value="g/ml">g/ml</option>
-                    </select>
-                    <label for="mesurements">Unità d'arrivo</label>
-                    <select name="mesurements" id="mesurements">
                         <option value="M">M</option>
-                        <option value="mg/mL">mg/mL</option>
                         <option value="mM">mM</option>
-                        <option value="uM">uM</option>
+                        <option value="uM">μM</option>
+                    </select>
+                    <label for="arrivo">Unità d'arrivo</label>
+                    <select name="arrivo" id="arrivo">
+                        <option value="mg/mL">mg/mL</option>
+                        <option value="g/ml">g/ml</option>
+                        <option value="M">M</option>
+                        <option value="mM">mM</option>
+                        <option value="uM">μM</option>
                     </select>
                 </div>
                 <div class="result-container">

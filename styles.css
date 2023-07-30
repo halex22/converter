@@ -5,3 +5,7 @@
 .result {
     margin-left: 1rem;
 }
+
+input {
+    border-radius: 5px;
+}
