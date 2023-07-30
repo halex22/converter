@@ -4,7 +4,7 @@ function MouseReaction(x) {
 
 function Calculate() {
     const inputUnit = $("#Partenza").val();
-    const outputUnit = $("#Arrivo").val();
+    const outputUnit = $("#arrivo").val();
     const unitCombo = `${inputUnit}-${outputUnit}`
     const givenValue = $("#inputEntered").val();
 
@@ -23,7 +23,7 @@ function Calculate() {
             resultValue = mgmLTomM(givenValue)
             break;
     }
-    $("#result").text(resultValue)
+    $(".result").text(resultValue)
 }
 
 function convertUnit(input, conversionFactor) {

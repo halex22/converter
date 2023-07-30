@@ -4,6 +4,8 @@
 
 .result {
     margin-left: 1rem;
+    color: rgb(29, 190, 83);
+    font-size: larger;
 }
 
 input {

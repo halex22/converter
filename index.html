@@ -22,7 +22,7 @@
             <div class="inputs-container">
                 <div class="const">
                     <label for="MV">Digita qui  <var>MW (g/mole o Da o uma)</var>
-                        <input type="number" id="wm" value="77.15" onmouseenter="MouseReaction(this)" onmouseout="MouseReaction(this)">
+                        <input type="number" id="wm" value="77.15" onmouseenter="MouseReaction(this)" onmouseout="MouseReaction(this)" onchange="Calculate()">
                     </label>
                     <p>Es: Insulina = 5734 <var>g/mol</var> </p>
                 </div>                
@@ -33,7 +33,7 @@
                     <label for="Partenza">Unita di Partenza</label>
                     <select name="Partenza" id="Partenza">
                         <option value="mg/mL">mg/mL</option>
-                        <option value="g/ml">g/ml</option>
+                        <option value="g/mL">g/ml</option>
                         <option value="M">M</option>
                         <option value="mM">mM</option>
                         <option value="uM">μM</option>
@@ -47,7 +47,7 @@
                         <option value="uM">μM</option>
                     </select>
                 </div>
-                <button type="button" onclick="calculate()">Calcola</button>
+                <button type="button" onclick="Calculate()">Calcola</button>
                 <div class="result-container">
                     <span class="result"></span>
                 </div>
