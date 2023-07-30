@@ -2,20 +2,33 @@ function MouseReaction(x) {
     $(x).toggleClass("mouse-over-input")
 }
 
-function Calculate(value) {
+function Calculate() {
     const inputUnit = $("#Partenza").val();
-    const givenValue = $("#inputEntered")
+    const outputUnit = $("#Arrivo").val();
+    const unitCombo = `${inputUnit}-${outputUnit}`
+    const givenValue = $("#inputEntered").val();
 
     let resultValue;
-    switch (inputUnit) {
-        case "mg/mL":
-            resultValue = mgmLToM()
+    switch (unitCombo) {
+        case "mg/mL-M" :
+            resultValue = mgmLToM(givenValue);
+            break;
+        case "g/mL-M":
+            resultValue = gmLToM(givenValue);
+            break;
+        case "mg/mL-uM":
+            resultValue = mgmLTouM(givenValue);
+            break;
+        case "mg/mL-mM":
+            resultValue = mgmLTomM(givenValue)
+            break;
     }
+    $("#result").text(resultValue)
 }
 
 function convertUnit(input, conversionFactor) {
-    const wm = $("#wm").val();
-    const result = input / wm * conversionFactor;
+    const mw = $("#wm").val();
+    const result = input / mw * conversionFactor;
     return result;
 }
 
