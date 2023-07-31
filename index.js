@@ -39,6 +39,8 @@ function Calculate() {
         case "μM-mg/mL":
             resultValue = mgmLTouM(givenValue, true)
             break;
+        case "μM-g/mL":
+            resultValue = mgmLTouM()
         case "mM-mg/mL":
             resultValue = mgmLTomM(givenValue, true)
             break;
@@ -82,6 +84,10 @@ function mgmLTouM(input, reverse) {
 
 function mgmLTomM(input, reverse) {
     return convertUnit(input, 1e3, reverse);
+}
+
+function gmLTouM (input, reverse) {
+    return convertUnit(input, 1e6, reverse)
 }
 
 function MTomM(input, reverse) {
