@@ -2,7 +2,14 @@ function MouseReaction(x) {
     $(x).toggleClass("mouse-over-input")
 }
 
+function resetResultArea() {
+    $("#sameUnit").text("")
+    $("#result").text("")
+    $("#resultVar").text("")
+}
+
 function Calculate() {
+    resetResultArea();
     const inputUnit = $("#Partenza").val();
     const outputUnit = $("#arrivo").val();
     const unitCombo = `${inputUnit}-${outputUnit}`
@@ -35,6 +42,19 @@ function Calculate() {
         case "mM-mg/mL":
             resultValue = mgmLTomM(givenValue, true)
             break;
+            // in between M's
+        case "M-mM":
+            resultValue = MTomM(givenValue, false);
+            break;
+        case "M-uM":
+            resultValue = MTouM(givenValue, false);
+            break;
+        case "mM-M":
+            resultValue = MTomM(givenValue, true);
+            break;
+        case "uM-M":
+            resultValue = MTouM(givenValue, true)
+            break;
         default:
             $("#sameUnit").text("Unità di partenza e arrivo sono la stessa")
     }
@@ -62,4 +82,14 @@ function mgmLTouM(input, reverse) {
 
 function mgmLTomM(input, reverse) {
     return convertUnit(input, 1e3, reverse);
+}
+
+function MTomM(input, reverse) {
+    const result = reverse ? (input * 1e-3) : (input * 1e3)
+    return result
+}
+
+function MTouM(input, reverse) {
+    const result = reverse ? (input * 1e-6) : (input * 1e6)
+    return result
 }

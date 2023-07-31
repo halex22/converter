@@ -8,6 +8,43 @@
     font-size: larger;
 }
 
-input {
+input, select {
     border-radius: 5px;
+}
+
+.main-container {
+    text-align: center;
+}
+
+.title {
+    margin: 2rem 0 4rem 0;
+}
+
+.const {
+    margin-bottom:  3rem;
+}
+
+.selection-section {
+    margin: 0 20%;
+}
+
+.selection-element {
+    display: inline;
+}
+
+#inputEntered {
+    width: 8rem;
+}
+
+button {
+    margin: 3rem 0 2rem;
+}
+
+.result-container {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#sameUnit {
+    color: brown;
 }
