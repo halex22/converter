@@ -46,13 +46,13 @@ function Calculate() {
         case "M-mM":
             resultValue = MTomM(givenValue, false);
             break;
-        case "M-uM":
+        case "M-μM":
             resultValue = MTouM(givenValue, false);
             break;
         case "mM-M":
             resultValue = MTomM(givenValue, true);
             break;
-        case "uM-M":
+        case "μM-M":
             resultValue = MTouM(givenValue, true)
             break;
         default:
