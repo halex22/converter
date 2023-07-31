@@ -11,39 +11,55 @@ function Calculate() {
     let resultValue;
     switch (unitCombo) {
         case "mg/mL-M" :
-            resultValue = mgmLToM(givenValue);
+            resultValue = mgmLToM(givenValue, false);
             break;
         case "g/mL-M":
-            resultValue = gmLToM(givenValue);
+            resultValue = gmLToM(givenValue, false);
             break;
-        case "mg/mL-uM":
-            resultValue = mgmLTouM(givenValue);
+        case "mg/mL-μM":
+            resultValue = mgmLTouM(givenValue, false);
             break;
         case "mg/mL-mM":
-            resultValue = mgmLTomM(givenValue)
+            resultValue = mgmLTomM(givenValue, false)
             break;
+            // reverse
+        case "M-mg/mL":
+            resultValue = mgmLToM(givenValue, true);
+            break;
+        case "M-g/mL":
+            resultValue = gmLToM(givenValue, true);
+            break;
+        case "μM-mg/mL":
+            resultValue = mgmLTouM(givenValue, true)
+            break;
+        case "mM-mg/mL":
+            resultValue = mgmLTomM(givenValue, true)
+            break;
+        default:
+            $("#sameUnit").text("Unità di partenza e arrivo sono la stessa")
     }
-    $(".result").text(resultValue)
+    $("#result").text(resultValue.toFixed(5))
+    $("#resultVar").text(outputUnit)
 }
 
-function convertUnit(input, conversionFactor) {
+function convertUnit(input, conversionFactor, reverse) {
     const mw = $("#wm").val();
-    const result = input / mw * conversionFactor;
+    const result = reverse ? (input * mw) / conversionFactor : (input / mw) * conversionFactor;
     return result;
 }
 
-function gmLToM(input) {
-    return convertUnit(input, 1e3); 
+function gmLToM(input, reverse) {
+    return convertUnit(input, 1e3, reverse); 
 }
 
-function mgmLToM(input) {
-    return convertUnit(input, 1); 
+function mgmLToM(input, reverse) {
+    return convertUnit(input, 1, reverse); 
 }
 
-function mgmLTouM(input) {
-    return convertUnit(input, 1e6);
+function mgmLTouM(input, reverse) {
+    return convertUnit(input, 1e6, reverse);
 }
 
-function mgmLTomM(input) {
-    return convertUnit(input, 1e3);
+function mgmLTomM(input, reverse) {
+    return convertUnit(input, 1e3, reverse);
 }

@@ -27,7 +27,7 @@
                     <p>Es: Insulina = 5734 <var>g/mol</var> </p>
                 </div>                
                 <div class="selection-test">
-                    <label for="inputEntered"> unita a convertire
+                    <label for="inputEntered"> valore a convertire
                         <input type="number" name="inputEntered" id="inputEntered" onmouseenter="MouseReaction(this)" onmouseout="MouseReaction(this)">
                     </label>
                     <label for="Partenza">Unita di Partenza</label>
@@ -36,7 +36,7 @@
                         <option value="g/mL">g/ml</option>
                         <option value="M">M</option>
                         <option value="mM">mM</option>
-                        <option value="uM">μM</option>
+                        <option value="μM">μM</option>
                     </select>
                     <label for="arrivo">Unità d'arrivo</label>
                     <select name="arrivo" id="arrivo">
@@ -44,12 +44,12 @@
                         <option value="g/ml">g/ml</option>
                         <option value="M">M</option>
                         <option value="mM">mM</option>
-                        <option value="uM">μM</option>
+                        <option value="μM">μM</option>
                     </select>
                 </div>
                 <button type="button" onclick="Calculate()">Calcola</button>
                 <div class="result-container">
-                    <span class="result"></span>
+                    <p> <span id="result"></span> <var id="resultVar"></var><span id="sameUnit"></span></p>
                 </div>
             </div>
         </div>
