@@ -7,13 +7,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="index.js"></script>
+    <script src="converter.js"></script>
+    <!-- <script src="index.js"></script> -->
     <title>Converter</title>
 </head>
 <body>
     <div class="main-container">
         <div class="title">
-            <h1>Ciao</h1>
+            <div class="img-area">
+                <span class="p-name">Pinguin</span>
+                <img src="IMG_1886.PNG" alt="">
+                <span class="p-name">Converter</span>
+            </div>
             <h2>Usa questo sito per rendere il tuo lavoro un po' più facile.
             </h2>
         </div>
@@ -21,35 +26,39 @@
             <div class="inputs-container">
                 <div class="const">
                     <label for="MV">Digita qui  <var>MW (g/mole o Da o uma)</var>
-                        <input type="number" id="wm" value="77.15" onmouseenter="MouseReaction(this)" onmouseout="MouseReaction(this)" onchange="Calculate()">
+                        <input type="number" id="wm" value="" onmouseenter="MouseReaction(this)" onmouseout="MouseReaction(this)" onchange="Calculate()">
                     </label>
                     <p>Es: Insulina = 5734 <var>g/mol</var> </p>
                 </div>                
                 <div class="selection-section row">
                     <div class="selection-element col-sm-4">
                         <label for="inputEntered"> valore a convertire
-                            <input type="number" name="inputEntered" id="inputEntered" onmouseenter="MouseReaction(this)" onmouseout="MouseReaction(this)">
+                            <input type="number" step="0.01" name="inputEntered" id="inputEntered" onmouseenter="MouseReaction(this)" onmouseout="MouseReaction(this)">
                         </label>
                     </div>
                     <div class="selection-element col-sm-4">
-                        <label for="Partenza">Unita di Partenza</label>
-                        <select name="Partenza" id="Partenza">
-                            <option value="mg/mL">mg/mL</option>
-                            <option value="g/mL">g/ml</option>
-                            <option value="M">M</option>
-                            <option value="mM">mM</option>
-                            <option value="μM">μM</option>
-                        </select>
+                        <label for="Partenza">Unita di Partenza
+                            <select name="Partenza" id="Partenza">
+                                <option value="mg/ml">mg/mL</option>
+                                <option value="g/ml">g/mL</option>
+                                <option value="m">M</option>
+                                <option value="mm">mM</option>
+                                <option value="μm">μM</option>
+                            </select>
+                        </label>
+
                     </div>
                     <div class="selection-element col-sm-4">
-                        <label for="arrivo">Unità d'arrivo</label>
-                        <select name="arrivo" id="arrivo">
-                            <option value="mg/mL">mg/mL</option>
-                            <option value="g/ml">g/ml</option>
-                            <option value="M">M</option>
-                            <option value="mM">mM</option>
-                            <option value="μM">μM</option>
-                        </select>
+                        <label class="label-in" for="arrivo">Unità d'arrivo
+                            <select name="arrivo" id="arrivo">
+                                <option value="mg/ml">mg/mL</option>
+                                <option value="g/ml">g/mL</option>
+                                <option value="m">M</option>
+                                <option value="mm">mM</option>
+                                <option value="μm">μM</option>
+                            </select>
+                        </label>
+
                     </div>                 
                 </div>
                 <button type="button" onclick="Calculate()" class="btn btn-primary">Calcola</button>

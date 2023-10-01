@@ -25,12 +25,9 @@ input, select {
 }
 
 .selection-section {
-    margin: 0 20%;
+    margin: 0 10%;
 }
 
-.selection-element {
-    display: inline;
-}
 
 #inputEntered {
     width: 8rem;
@@ -47,4 +44,24 @@ button {
 
 #sameUnit {
     color: brown;
+}
+
+img {
+    width: 15%;
+    display: inline;
+}
+
+.p-name {
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.selection-element label{
+    margin-left: 1rem;
+    height: 5rem;
+}
+
+.img-area img:hover {
+    transition: 1s ease-in-out;
+    rotate: 1 2 1 360deg;
 }
