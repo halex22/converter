@@ -16,7 +16,7 @@ const unitMap = {
     "mm-g/ml": { value: 1, useMW: true },
     "mm-μm": { value: 1000, useMW: false },
     "μm-mm": { value: 0.001, useMW: false },
-    "mg/ml-g/ml": { value: 0.001, useMW: false },
+    "mg/ml-g/ml": { value: 10e-3, useMW: false },
     "g/ml-gm/ml": { value: 1, useMW: false }
 };
   
@@ -53,7 +53,7 @@ function Calculate() {
       return;
     }
     const resultValue = convertUnit(givenValue, conversionFactor, reverseConversion, useMWFactor);
-    $("#result").text(resultValue.toFixed(6));
+    $("#result").text(resultValue);
     $("#resultVar").text(outputUnit);
 }  
 
