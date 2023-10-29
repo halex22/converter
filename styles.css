@@ -17,11 +17,11 @@ input, select {
 }
 
 .title {
-    margin: 2rem 0 4rem 0;
+    margin: 2rem 0 2rem 0;
 }
 
 .const {
-    margin-bottom:  3rem;
+    margin-bottom:  2rem;
 }
 
 .selection-section {
@@ -34,7 +34,7 @@ input, select {
 }
 
 button {
-    margin: 3rem 0 2rem;
+    margin: 1rem 0 ;
 }
 
 .result-container {
