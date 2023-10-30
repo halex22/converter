@@ -71,7 +71,7 @@ function createComboUnit() {
 
 function Calculate() {
     if (startUnitMissing()) {
-        return alert("Valore a convertire mancate");
+        return alert("Valore a convertire mancante");
     }
     const unitCombo = createComboUnit();
     const givenValue = parseFloat(document.getElementById("inputEntered").value);
