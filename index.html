@@ -36,7 +36,7 @@
         <section>
           <div class="const">
             <label for="MV">Digita qui <var>MW (g/mole o Da o uma)</var>
-              <input type="number" id="wm" value="150000" onmouseenter="MouseReaction(this)" onmouseout="MouseReaction(this)">
+              <input type="number" id="wm" onmouseenter="MouseReaction(this)" onmouseout="MouseReaction(this)">
             </label>
             <aside>
               <p>Es: Insulina = 5734 <var>g/mol</var> </p>
@@ -47,8 +47,8 @@
         <section>
           <div class="selection-section row">
             <div class="selection-element col-sm-4">
-              <label for="inputEntered"> valore a convertire
-                <input type="number" value="0.0053" step="0.01" name="inputEntered" id="inputEntered" onmouseenter="MouseReaction(this)"
+              <label for="inputEntered"> Valore a convertire
+                <input type="number" required step="0.01" name="inputEntered" id="inputEntered" onmouseenter="MouseReaction(this)"
                   onmouseout="MouseReaction(this)">
               </label>
             </div>
@@ -58,7 +58,7 @@
                   <option value="mg/ml">mg/mL</option>
                   <option value="g/ml">g/mL</option>
                   <option value="m">M</option>
-                  <option value="mm"selected>mM</option>
+                  <option value="mm">mM</option>
                   <option value="μm">μM</option>
                 </select>
               </label>
@@ -69,7 +69,7 @@
                 <select name="arrivo" id="arrivo">
                   <option value="mg/ml">mg/mL</option>
                   <option value="g/ml">g/mL</option>
-                  <option value="m">M</option>
+                  <option value="m" selected>M</option>
                   <option value="mm">mM</option>
                   <option value="μm">μM</option>
                 </select>

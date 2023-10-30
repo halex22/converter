@@ -31,7 +31,7 @@ const unitMap = {
 
 /**
  * 
- * @param {HTMLElement} x 
+ * @param {HTMLElement} element
  */
 function MouseReaction(element) {
     element.classList.toggle("mouse-over-input");
@@ -70,14 +70,19 @@ function createComboUnit() {
 
 
 function Calculate() {
+    if (startUnitMissing()) {
+        return alert("Valore a convertire mancate");
+    }
     const unitCombo = createComboUnit();
     const givenValue = parseFloat(document.getElementById("inputEntered").value);
     let result
 
     if (SameInput()) {
-        document.getElementById("sameUnit").
-        textContent = "Unità di partenza e arrivo sono le stesse";
-        return;
+        const unitEle = document.getElementById("sameUnit")
+        if (unitEle) {
+            unitEle.textContent = "Unità di partenza e arrivo sono le stesse";
+            return 
+        }
     }
     const conversionFactor = unitMap[unitCombo].value;
     const useMWFactor = unitMap[unitCombo].useMW;
@@ -117,4 +122,10 @@ function convertBetweenMs(combo) {
 function SameInput() {
     const comboArray = createComboUnit().split("-");
     return comboArray[0] === comboArray[1];
+}
+
+
+function startUnitMissing() {
+    const value = document.getElementById("inputEntered").value;
+    return value.length === 0
 }

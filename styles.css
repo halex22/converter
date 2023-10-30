@@ -1,3 +1,7 @@
+body {
+    background-color: aliceblue;
+}
+
 .mouse-over-input {
     border: solid 3px rgb(185, 209, 246);
 }
