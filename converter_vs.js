@@ -116,7 +116,6 @@ function convertBetweenMs(combo) { // here !!!!
 }
 
 /**
- * 
  * @returns {boolean} - True if the inputs are the same
  */
 function SameInput() {
