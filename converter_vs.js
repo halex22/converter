@@ -25,7 +25,7 @@ const unitMap = {
     "mm-g/ml": { value: 1e6, useMW: true },
     "mm-μm": { value: 1000, useMW: false },
     "μm-mm": { value: 0.001, useMW: false },
-    "mg/ml-g/ml": { value: 0.001, useMW: false },
+    "mg/ml-g/ml": { value: 1e-3, useMW: false },
     "g/ml-gm/ml": { value: 1, useMW: false }
 };
 
@@ -111,8 +111,8 @@ function writeResult(result) {
  * @param {string[]} combo An array representing a combination.
  * @returns {boolean} - True if 'm' is present in the combination, false otherwise.
  */
-function convertBetweenMs(combo) {
-    return combo[0] === "m" || combo[1][1] == "m" || combo[1] === "m";
+function convertBetweenMs(combo) { // here !!!!
+    return combo[0].length <= 2 && combo[1].length <= 2;
 }
 
 /**
