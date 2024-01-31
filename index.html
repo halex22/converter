@@ -11,6 +11,8 @@
     crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="common.css">
+
   <script src="converter_vs.js" defer></script>
   <script src="converter_beta.js" defer></script>
   <title>Converter</title>
@@ -85,6 +87,17 @@
           <p> <span id="result"></span> <var id="resultVar"></var><span id="sameUnit"></span></p>
         </div>
       </div>
+      <div id="other">
+        <button id="link-btn">
+          <a  href="calcolatore_pop.html">Calcolatore correlazione </a>
+        </button>
+      </div>
+      <script>
+        const btn = document.getElementById('link-btn');
+        btn.addEventListener('click', () => {
+          btn.querySelector('a').click()
+        })
+      </script>
     </div>
   </div>
 </body>

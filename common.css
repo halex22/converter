@@ -1,0 +1,21 @@
+#link-btn {
+    background-color: green;
+    margin-top: 2rem;
+    text-decoration: none;
+    padding: 0.5rem 0.7rem;
+    border-radius: 7px;
+    border-color: rgb(1, 136, 1);
+    font-weight: bolder;
+    font-size: 0.85rem;
+}
+
+#link-btn:hover{
+    background-color: rgb(1, 163, 1);
+    font-size: small;
+    font-size: 0.87rem;
+}
+
+#link-btn a {
+    color: white;
+    text-decoration: none;
+}

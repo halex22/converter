@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pop.css">
+    <link rel="stylesheet" href="common.css">
+    <script src="con_2.js" defer></script>
+    <title>Calcolatore di relazione</title>
+</head>
+<body>
+    <main>
+        <section id="header-section">
+            <header><h1>Calcolatore di relazione tra due popolazioni</h1></header>
+        </section>
+
+        <section id="input-section">
+            <div class="input-container">
+                <label for="x">Popolazione X</label>
+                <input type="text" name="x input" id="x">
+            </div>
+
+            <div class="input-container">
+                <label for="y">Popolazione Y</label>
+            <input type="text" name="y input" id="y">
+            </div>
+
+            <div id="result-container">
+                <p>Resultato:</p>
+                <p id="result">0</p>
+            </div>
+            <button type="button" id="actionBtn">Calcola</button>
+        </section>
+
+        <div id="other">
+            <button id="link-btn">
+              <a  href="index.html">Calcolatore correlazione </a>
+            </button>
+          </div>
+          <script>
+            const btn = document.getElementById('link-btn');
+            btn.addEventListener('click', () => {
+              btn.querySelector('a').click()
+            })
+          </script>
+    </main>
+</body>
+</html>
