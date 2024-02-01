@@ -17,32 +17,37 @@
         <section id="input-section">
             <div class="input-container">
                 <label for="x">Popolazione X</label>
-                <input type="text" name="x input" id="x">
+                <textarea name="x-input" id="x" cols="30" rows="5"></textarea>
             </div>
 
             <div class="input-container">
                 <label for="y">Popolazione Y</label>
-            <input type="text" name="y input" id="y">
+                <textarea name="y-input" id="y" cols="30" rows="5"></textarea>
             </div>
 
             <div id="result-container">
                 <p>Risultato:</p>
                 <p id="result">0</p>
             </div>
-            <button type="button" id="actionBtn">Calcola</button>
+
+            <div class="btn-container">
+                <button  type="button" class="btn-common" id="actionBtn">Calcola</button>
+            </div>
+
+            
         </section>
 
-        <div id="other">
-            <button id="link-btn">
-              <a  href="index.html">Calcolatore correlazione </a>
-            </button>
-          </div>
-          <script>
-            const otheBbtn = document.getElementById('link-btn');
-            btn.addEventListener('click', () => {
-              btn.querySelector('a').click()
-            })
-          </script>
+        <div id="other" class="btn-container">
+            <button id="link-btn" class="btn-common">
+                <a  href="index.html">Penguin Converter</a>
+            </button>            
+        </div>
+        <script>
+        const otheBbtn = document.getElementById('link-btn');
+        btn.addEventListener('click', () => {
+            btn.querySelector('a').click()
+        })
+        </script>
     </main>
 </body>
 </html>

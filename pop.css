@@ -10,13 +10,16 @@
     margin: 2rem 1rem;
 }
 
-button {
+#actionBtn {
     background-color: blue;
+    border-color: rgb(0, 46, 183);
     color: white;
-    border-radius: 5px;
-    border-color: aliceblue;
-    margin-top: 2rem;
-    padding: 0.25rem 0.5rem;
+}
+
+#actionBtn:hover{
+    background-color: rgb(53, 99, 237);
+    font-size: small;
+    font-size: 0.87rem;
 }
 
 #result-container {
@@ -29,3 +32,28 @@ button {
     font-size: xx-large;
 }
 
+textarea {
+    display: block;
+    margin-top: .5rem;
+}
+
+textarea:hover {
+    border-color: rgb(13, 13, 223);
+    border-width: 2px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-container:first-child{
+    margin-bottom: 2rem;
+}
+
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
